@@ -6,6 +6,7 @@ import Characters from './components/Characters';
 import World from './components/World';
 import Community from './components/Community';
 import Footer from './components/Footer';
+import ScrollProgress from './components/ScrollProgress';
 import { Menu, X } from 'lucide-react';
 
 const App: React.FC = () => {
@@ -37,6 +38,8 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#050505] text-stone-200 selection:bg-gold-500 selection:text-black">
+      <ScrollProgress />
+
       {/* Minimal Navigation */}
       <nav className="fixed top-0 left-0 w-full z-40 px-6 py-6 flex justify-between items-center mix-blend-difference">
         <div className="font-display font-bold text-xl tracking-widest text-stone-300">
