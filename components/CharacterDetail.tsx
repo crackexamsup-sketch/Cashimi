@@ -15,10 +15,12 @@ const CharacterDetail: React.FC<CharacterDetailProps> = ({ character, onClose })
   const [isSecretUnlocked, setIsSecretUnlocked] = useState(false);
 
   useEffect(() => {
-    requestAnimationFrame(() => setIsVisible(true));
+    // Ensure animation plays after mount
+    const timer = setTimeout(() => setIsVisible(true), 10);
     document.body.style.overflow = 'hidden';
     return () => {
       document.body.style.overflow = 'auto';
+      clearTimeout(timer);
     };
   }, []);
 
@@ -34,7 +36,7 @@ const CharacterDetail: React.FC<CharacterDetailProps> = ({ character, onClose })
   const themeAccent = isLin ? 'text-purple-200' : 'text-blue-200';
 
   return (
-    <div className={`fixed inset-0 z-50 flex items-center justify-center transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+    <div className={`fixed inset-0 z-[100] flex items-center justify-center transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
       
       {/* Background Layer */}
       <div className="absolute inset-0 bg-black/95 backdrop-blur-md transition-opacity duration-700" onClick={handleClose}>

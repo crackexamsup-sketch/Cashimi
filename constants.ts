@@ -1,4 +1,4 @@
-import { CharacterProfile, WorldLore, DialogueFrame, CommunityPost } from './types';
+import { CharacterProfile, WorldLore, DialogueFrame, CommunityPost, GalleryData } from './types';
 
 export const INTRO_TEXTS = [
   "영원한 삶을 사는 고대의 존재여...",
@@ -20,7 +20,6 @@ export const PROLOGUE_SCRIPT: DialogueFrame[] = [
   { id: 8, speakerId: 'lin', text: "이제부터 당신은 제 '자산'이에요. 거부는... 거절할게요?", expression: 'seduction' },
 ];
 
-// Updated Mock Data with Avatars
 export const INITIAL_COMMUNITY_POSTS: CommunityPost[] = [
   {
     id: 'post-1',
@@ -62,6 +61,46 @@ export const INITIAL_COMMUNITY_POSTS: CommunityPost[] = [
   }
 ];
 
+export const GALLERY_CONTENT: GalleryData = {
+  lin: {
+    daily: [
+      { title: '기본 초상화', url: 'https://i.ifh.cc/t4RLSk.webp' },
+      { title: '업무중', url: 'https://i.ifh.cc/mHVjfw.png' },
+      { title: '미소', url: 'https://i.ifh.cc/3l2RSs.png' },
+      { title: '유혹', url: 'https://i.ifh.cc/G750b2.png' },
+      { title: '욕정', url: 'https://i.ifh.cc/RwS8wC.png' },
+      { title: '부끄러움', url: 'https://i.ifh.cc/MWYRjS.png' },
+      { title: '수줍음', url: 'https://i.ifh.cc/96PSoZ.png' },
+      { title: '놀람', url: 'https://i.ifh.cc/aOJTv3.png' },
+      { title: '분노', url: 'https://i.ifh.cc/mt6Cb9.png' },
+      { title: '눈물', url: 'https://i.ifh.cc/Xs8lVq.png' },
+      { title: '지침', url: 'https://i.ifh.cc/hPDLxT.png' },
+      { title: '흡혈당함', url: 'https://i.ifh.cc/dv8jzm.png' },
+      { title: '각성', url: 'https://i.ifh.cc/AVCdMK.png' },
+      { title: '전투 (근접)', url: 'https://i.ifh.cc/VS2TZZ.png' },
+      { title: '전투 (원거리)', url: 'https://i.ifh.cc/lrK3cB.png' },
+    ],
+    r18: [] // Placeholder
+  },
+  ran: {
+    daily: [
+      { title: '기본 초상화', url: 'https://i.ifh.cc/YtQX5s.png' },
+      { title: '경계', url: 'https://i.ifh.cc/cd1kvN.png' },
+      { title: '호기심', url: 'https://i.ifh.cc/2sHG5t.png' },
+      { title: '고민', url: 'https://i.ifh.cc/Jl7z3o.png' },
+      { title: '자신만만', url: 'https://i.ifh.cc/Jl7z3o.png' },
+      { title: '눈물', url: 'https://i.ifh.cc/5PWPSJ.png' },
+      { title: '졸림', url: 'https://i.ifh.cc/H6ADtB.png' },
+      { title: '부끄러움', url: 'https://i.ifh.cc/VfmPJN.png' },
+      { title: '미소', url: 'https://i.ifh.cc/l2sRcy.png' },
+      { title: '전투 (근접)', url: 'https://i.ifh.cc/1VKvlD.png' },
+      { title: '전투 (원거리)', url: 'https://i.ifh.cc/gBchl3.png' },
+      { title: '흡혈당함', url: 'https://i.ifh.cc/sKlKtG.png' },
+    ],
+    r18: [] // Placeholder
+  }
+};
+
 export const CHARACTERS: CharacterProfile[] = [
   {
     id: 'lin',
@@ -70,10 +109,10 @@ export const CHARACTERS: CharacterProfile[] = [
     title: '천류의 마녀 | 가주 대행',
     quote: "칼로 찌르면 피가 나지만, 돈으로 찌르면 영혼이 나온답니다.",
     colorTheme: 'purple',
-    imagePlaceholder: 'https://i.ifh.cc/FcDZl0.webp', // New Default
+    imagePlaceholder: 'https://i.ifh.cc/t4RLSk.webp', // Updated to new default
     expressions: {
-      arrogant: 'https://i.ifh.cc/aYvwag.png', // Replaced with new image
-      seduction: 'https://i.ifh.cc/aYvwag.png'  // Replaced with new image
+      arrogant: 'https://i.ifh.cc/mt6Cb9.png', // Mapped to Anger/Arrogance
+      seduction: 'https://i.ifh.cc/G750b2.png'  // Mapped to Seduce
     },
     description: "카시미 백작가의 실질적인 지배자이자 천재적인 상인. 아름다운 외모 뒤에 철저한 계산과 탐욕을 숨기고 있다. 대담한 통솔자(ENTJ-A)인 그녀에게 세상은 거대한 장기판이며, 모든 인간은 가격표가 붙은 말일 뿐이다. '비겁함'은 그녀에게 욕이 아니라 최고의 칭찬이다.",
     

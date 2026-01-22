@@ -113,3 +113,20 @@ export interface CommunityPost {
   tags?: string[];
   isMine?: boolean; // To allow deletion
 }
+
+// Gallery Types
+export interface GalleryItem {
+  url: string;
+  title: string;
+}
+
+export interface GalleryData {
+  lin: {
+    daily: GalleryItem[];
+    r18: GalleryItem[];
+  };
+  ran: {
+    daily: GalleryItem[];
+    r18: GalleryItem[];
+  };
+}

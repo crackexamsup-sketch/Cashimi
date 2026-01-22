@@ -19,7 +19,7 @@ const Characters: React.FC = () => {
         <div 
           className={`relative h-1/2 md:h-full transition-all duration-700 ease-in-out overflow-hidden group border-b md:border-b-0 md:border-r border-stone-900 cursor-pointer touch-manipulation
             ${hoveredId === 'lin' ? 'md:w-[65%]' : hoveredId === 'ran' ? 'md:w-[35%]' : 'md:w-[50%]'}
-            w-full md:w-auto
+            w-full
           `}
           onMouseEnter={() => setHoveredId('lin')}
           onMouseLeave={() => setHoveredId(null)}
@@ -63,7 +63,7 @@ const Characters: React.FC = () => {
         <div 
           className={`relative h-1/2 md:h-full transition-all duration-700 ease-in-out overflow-hidden group cursor-pointer touch-manipulation
             ${hoveredId === 'ran' ? 'md:w-[65%]' : hoveredId === 'lin' ? 'md:w-[35%]' : 'md:w-[50%]'}
-            w-full md:w-auto
+            w-full
           `}
           onMouseEnter={() => setHoveredId('ran')}
           onMouseLeave={() => setHoveredId(null)}

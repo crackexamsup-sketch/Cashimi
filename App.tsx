@@ -3,6 +3,7 @@ import Intro from './components/Intro';
 import Hero from './components/Hero';
 import Prologue from './components/Prologue';
 import Characters from './components/Characters';
+import Gallery from './components/Gallery';
 import World from './components/World';
 import Community from './components/Community';
 import Footer from './components/Footer';
@@ -59,6 +60,7 @@ const App: React.FC = () => {
          <a href="#" onClick={(e) => scrollToSection(e, 'home')} className="font-display text-3xl md:text-4xl text-stone-400 hover:text-gold-400 transition-colors">Home</a>
          <a href="#prologue" onClick={(e) => scrollToSection(e, 'prologue')} className="font-display text-3xl md:text-4xl text-stone-400 hover:text-gold-400 transition-colors">Story</a>
          <a href="#characters" onClick={(e) => scrollToSection(e, 'characters')} className="font-display text-3xl md:text-4xl text-stone-400 hover:text-gold-400 transition-colors">The Twins</a>
+         <a href="#gallery" onClick={(e) => scrollToSection(e, 'gallery')} className="font-display text-3xl md:text-4xl text-stone-400 hover:text-gold-400 transition-colors">Gallery</a>
          <a href="#world" onClick={(e) => scrollToSection(e, 'world')} className="font-display text-3xl md:text-4xl text-stone-400 hover:text-gold-400 transition-colors">Archives</a>
          <a href="#community" onClick={(e) => scrollToSection(e, 'community')} className="font-display text-3xl md:text-4xl text-stone-400 hover:text-gold-400 transition-colors">Community</a>
       </div>
@@ -67,6 +69,7 @@ const App: React.FC = () => {
         <Hero />
         <Prologue />
         <Characters />
+        <Gallery />
         <World />
         <Community />
       </main>
